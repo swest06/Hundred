@@ -1,8 +1,6 @@
 Purposes of this assignment
 ===========================
 
-<!-- -->
-
 -   To give you more experience with basic Python
 -   To familiarize you with:
     -   Simple input
