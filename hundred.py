@@ -49,18 +49,17 @@ def human_move(computer_score, human_score, ask_yes_or_no):
     turn = True
     while turn:
 
-        if ask_yes_or_no() == "n":
+        if ask_yes_or_no() == False:
             turn == False
             break
-        else
-
-        a = roll()
-        if a == 1:
-            human_score = 0
-            turn = False
         else:
-            human_score = human_score + a
-            print(human_score)
+            a = roll()
+            if a == 1:
+                human_score = 0
+                turn = False
+            else:
+                human_score = human_score + a
+                print(human_score)
 
     if human_score > computer_score:
         print("You are winning by " + human_score - computer_score + " points")
@@ -70,8 +69,17 @@ def human_move(computer_score, human_score, ask_yes_or_no):
         print("You are tied with the computer")
         
 def ask_yes_or_no():
-    a = input("Do you want to roll again? Y/N: ").lower()
-    return a[0]
+    response = False
+    while response == False:
+        a = input("Do you want to roll again? Y/N: ").lower()
+        if a[0] == "y":
+            response = True
+            return True
+        elif a[0] == "n":
+            response = True
+            return False
+        else:
+            continue
 
     
 roll = roll()
