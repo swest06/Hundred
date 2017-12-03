@@ -14,7 +14,7 @@ def roll():
     return random.randint(1, 6)    
 
 
-def computer_move(computer_score, human_score, roll):
+def computer_move(computer_score, human_score):
     total = 0
     while computer_score < human_score:
         a = roll()
@@ -38,28 +38,25 @@ def computer_move(computer_score, human_score, roll):
             
     return total
 
-def human_move(computer_score, human_score, ask_yes_or_no):
-   """if ask_yes_or_no() == "y":
-        turn = True
-    elif ask_yes_or_no() == "n":
-        print(computer_score)
-        print(human_score)
-        turn = False"""
 
+def human_move(computer_score, human_score):
     turn = True
     while turn:
-
+        
         if ask_yes_or_no() == False:
             turn == False
             break
         else:
             a = roll()
+
             if a == 1:
                 human_score = 0
                 turn = False
             else:
+                print("You rolled a " + a)
                 human_score = human_score + a
-                print(human_score)
+                print("Your score is now " + human_score)
+                continue
 
     if human_score > computer_score:
         print("You are winning by " + human_score - computer_score + " points")
@@ -67,7 +64,10 @@ def human_move(computer_score, human_score, ask_yes_or_no):
         print("You are losing by " + computer_score - human_score + " points")
     else:
         print("You are tied with the computer")
-        
+
+    return human_score
+
+
 def ask_yes_or_no():
     response = False
     while response == False:
