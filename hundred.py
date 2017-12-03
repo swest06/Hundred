@@ -21,8 +21,10 @@ def computer_move(computer_score, human_score):
         if a == 1:
             computer_score = 0
             turn = False
+            print("Your opponent has rolled a '1' and their total score is now '0'") 
         else:
             computer_score = computer_score + a
+            print("Your oppent has rolled a '" + a + "', their total score is now " + computer_score)
 
             if computer_score => human_score:
                 roll_again == random.randint(1, 2)
@@ -30,7 +32,10 @@ def computer_move(computer_score, human_score):
                 if roll_again = 1:
                     continue
                 else:
+                    turn = False
                     break
+
+    return computer_score
                 
                 
         
