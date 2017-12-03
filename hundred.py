@@ -15,12 +15,30 @@ def roll():
 
 
 def computer_move(computer_score, human_score):
-    total = 0
-    while computer_score < human_score:
+    turn = True
+    while turn:
         a = roll()
         if a == 1:
-            total = 0
-            a = 0
+            computer_score = 0
+            turn = False
+        else:
+            computer_score = computer_score + a
+
+            if computer_score => human_score:
+                roll_again == random.randint(1, 2)
+
+                if roll_again = 1:
+                    continue
+                else:
+                    break
+                
+                
+        
+    
+   ''' while computer_score < human_score:
+        a = roll()
+        if a == 1:
+            computer_score = 0
             break
         else:
             total = total + a
@@ -34,7 +52,7 @@ def computer_move(computer_score, human_score):
                 a = 0
                 break
             else:
-                total = total + a
+                total = total + a'''
             
     return total
 
