@@ -68,7 +68,7 @@ def human_move(computer_score, human_score):
     while turn:
         
         if ask_yes_or_no() == False:
-            turn == False
+            turn = False
             break
         else:
             a = roll()
@@ -105,5 +105,17 @@ def ask_yes_or_no():
         else:
             continue
 
+def show_results(computer_score, human_score):
+    if computer_score > human_score:
+        print("You have lost by " computer_score - human_score + " points.")
+
+    elif human_score > computer_score:
+        print("You have won by " + human_score - computer_score " points.")
+
+    else:
+        print("You have tied with your opponent.")
+        print("You both scored " + human_score + " points.")
+
+            
     
 roll = roll()
