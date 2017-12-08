@@ -105,6 +105,13 @@ def ask_yes_or_no():
         else:
             continue
 
+def is_game_over(hum, cpu):
+    if hum > cpu:
+        return True
+    else:
+        return False
+    
+
 def show_results(computer_score, human_score):
     if computer_score > human_score:
         print("You have lost by " computer_score - human_score + " points.")
