@@ -124,5 +124,14 @@ def show_results(computer_score, human_score):
         print("You both scored " + human_score + " points.")
 
             
+
+def main():
+    human_score = 0
+    computer_score = 0
+    instructions()
+    computer_move(computer_score, human_score)
     
+
+    
+
 roll = roll()
