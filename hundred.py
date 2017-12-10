@@ -58,9 +58,9 @@ def computer_move(computer_score, human_score):
                 a = 0
                 break
             else:
-                total = total + a'''
+                total = total + a
             
-    return total
+    return total'''
 
 
 def human_move(computer_score, human_score):
