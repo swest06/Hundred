@@ -105,8 +105,9 @@ def ask_yes_or_no():
         else:
             continue
 
+
 def is_game_over(hum, cpu):
-    if hum > cpu:
+    if hum >= 100 or cpu >= 100:
         return True
     else:
         return False
@@ -128,9 +129,26 @@ def show_results(computer_score, human_score):
 def main():
     human_score = 0
     computer_score = 0
+
     instructions()
-    computer_move(computer_score, human_score)
-    
+
+    finished = False
+    while finished == False: 
+        computer_scoree = computer_move(computer_score, human_score)
+        human_score = human_move(computer_score, human_score)
+        
+
+
+        if human_score >= 100 or computer_score >= 100:
+
+            if human_score != computer_score:
+                if is_game_over(human_score, computer_score) == True:
+                    show_results(computer_score, human_score)
+                
+            else:
+                
+                
+            
 
     
 
