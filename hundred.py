@@ -78,15 +78,15 @@ def human_move(computer_score, human_score):
                 human_score = 0
                 turn = False
             else:
-                print("You rolled a " + a)
+                print("You rolled a " + str(a))
                 human_score = human_score + a
-                print("Your score is now " + human_score)
+                print("Your score is now " + str(human_score))
                 continue
 
     if human_score > computer_score:
-        print("You are winning by " + human_score - computer_score + " points")
+        print("You are winning by " + str(human_score - computer_score) + " points")
     elif computer_score > human_score:
-        print("You are losing by " + computer_score - human_score + " points")
+        print("You are losing by " + str(computer_score - human_score) + " points")
     else:
         print("You are tied with the computer")
 
@@ -116,14 +116,14 @@ def is_game_over(hum, cpu):
 
 def show_results(computer_score, human_score):
     if computer_score > human_score:
-        print("You have lost by " + computer_score - human_score + " points.")
+        print("You have lost by " + str(computer_score - human_score) + " points.")
 
     elif human_score > computer_score:
-        print("You have won by " + human_score - computer_score + " points.")
+        print("You have won by " + str(human_score - computer_score) + " points.")
 
     else:
         print("You have tied with your opponent.")
-        print("You both scored " + human_score + " points.")
+        print("You both scored " + str(human_score) + " points.")
 
             
 
