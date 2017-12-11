@@ -7,7 +7,8 @@ def instructions():
     print("Roll the die as many times as you want to accumulate your score.")
     print("Each number you roll gets added to your score. However if you roll a '1' your score resets to '0'.")
     print("If this happens your turn ends and your opponent (the computer) gets to roll")
-    print("etc...")
+    print("The first player to reach '100' wins.")
+    print("If your scored is tied with your opponent at 100 points or more you will each get an additional turn until the tie is broken")
 
 
 def roll():
@@ -107,7 +108,7 @@ def ask_yes_or_no():
 
 
 def is_game_over(hum, cpu):
-    if hum >= 100 or cpu >= 100:
+    if (hum >= 100 or cpu >= 100) and hum != cpu:
         return True
     else:
         return False
@@ -139,17 +140,18 @@ def main():
         
 
 
-        if human_score >= 100 or computer_score >= 100:
+        
+        if is_game_over(human_score, computer_score) == True:
+            show_results(computer_score, human_score)
 
-            if human_score != computer_score:
-                if is_game_over(human_score, computer_score) == True:
-                    show_results(computer_score, human_score)
+            finished = True
                 
-            else:
+        else:
+            continue
                 
                 
             
-
+main()
     
 
-roll = roll()
+
