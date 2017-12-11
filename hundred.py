@@ -30,7 +30,7 @@ def computer_move(computer_score, human_score):
             if computer_score >= human_score:
                 roll_again == random.randint(1, 2)
 
-                if roll_again = 1:
+                if roll_again == 1:
                     print("Your opponent rolls again")
                     continue
                 else:
