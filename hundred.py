@@ -27,7 +27,7 @@ def computer_move(computer_score, human_score):
             computer_score = computer_score + a
             print("Your opponent has rolled a '" + a + "', their total score is now " + computer_score)
 
-            if computer_score => human_score:
+            if computer_score >= human_score:
                 roll_again == random.randint(1, 2)
 
                 if roll_again = 1:
