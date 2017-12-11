@@ -135,7 +135,7 @@ def main():
 
     finished = False
     while finished == False: 
-        computer_scoree = computer_move(computer_score, human_score)
+        computer_score = computer_move(computer_score, human_score)
         human_score = human_move(computer_score, human_score)
         
 
