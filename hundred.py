@@ -119,7 +119,7 @@ def show_results(computer_score, human_score):
         print("You have lost by " + computer_score - human_score + " points.")
 
     elif human_score > computer_score:
-        print("You have won by " + human_score - computer_score " points.")
+        print("You have won by " + human_score - computer_score + " points.")
 
     else:
         print("You have tied with your opponent.")
